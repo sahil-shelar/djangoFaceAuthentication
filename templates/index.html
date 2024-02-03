@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+</head>
+<body>
+    <h1>Face Recognition</h1>
+    {% csrf_token %}
+    {% load static %}
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <br>
+    <video id="video" width="640" height="480" autoplay></video>
+    <br>
+    <button onclick="initWebcam()">Start Webcam</button>
+    <button onclick="capture()">Capture Photo</button>
+    <br>
+    <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+    <br>
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

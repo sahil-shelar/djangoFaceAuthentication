@@ -9,7 +9,7 @@
     <h1>Face Authentication</h1>
     <form action="authenticate" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        Enter yo    ur name: <input type="text" name="name" required><br><br>
+        Enter your name: <input type="text" name="name" required><br><br>
         Input picture: <input type="file" name="image" accept="image/*" required><br><br>
         <input type="submit" value="Submit">
     </form>
